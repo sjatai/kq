@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoyaltyDashboard from './LoyaltyDashboard'; // New component
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<LoyaltyDashboard />} /> {/* Loyalty-focused */}
           </Routes>
         </main>
       </div>
@@ -38,13 +39,5 @@ function Login() {
   );
 }
 
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Manage promotions, track loyalty points, and integrate with MoEngage.</p>
-    </div>
-  );
-}
 
 export default App;
